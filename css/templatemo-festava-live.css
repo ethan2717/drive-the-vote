@@ -366,7 +366,7 @@ strong {
   CUSTOM ICON COLOR               
 -----------------------------------------*/
 .custom-icon {
-  color: var(--secondary-color);
+  color: var(black);
 }
 
 
@@ -430,7 +430,7 @@ strong {
   SITE HEADER              
 -----------------------------------------*/
 .site-header {
-  background-color: var(--primary-color);
+  background-color: black;
   padding-top: 12px;
   padding-bottom: 12px;
 }
