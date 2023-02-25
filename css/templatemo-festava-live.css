@@ -293,6 +293,11 @@ strong {
   padding-bottom: 100px;
 }
 
+#section_6 {
+  padding-left:30%;
+  padding-right:0%
+}
+
 .section-bg {
   background-color: var(--section-bg-color);
 }
