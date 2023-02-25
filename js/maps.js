@@ -1,8 +1,18 @@
-var map = L.map('map');
+var map = L.map('map').setView([42.35532753176672, -71.06532863539319], 13);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
 }).addTo(map);
+
+
+
+async function addGeoJson() {
+    const response = await fetch("/lib/geojson/Polling_Locations.geojson");
+    const data = await response.json();
+    L.geoJson(data).addTo(map);
+}
+
+addGeoJson();
 
 /*
 Mapping
@@ -15,15 +25,4 @@ L.Routing.control({
 }).addTo(map);
 */
 
-/*
-GeoJSON Polling Locations
-let xhr = new XMLHttpRequest();
-xhr.open('GET', 'lib/geojson/Polling_Locations.geojson');
-xhr.setRequestHeader('Content-Type', 'application/json');
-xhr.responseType = 'json';
-xhr.onload = function() {
-    if (xhr.status !== 200) return
-    L.geoJSON(xhr.response).addTo(map);
-};
-xhr.send();
-*/
+
