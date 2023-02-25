@@ -14,6 +14,28 @@ async function addGeoJson() {
 
 addGeoJson();
 
+// Circle ranges
+var circle = L.circle([42.364875718764935, -71.05748723613675], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 600
+}).addTo(map);
+
+// Volunteer Driver - Casa Maria (North End)
+// var driver_loc = L.marker([42.364875718764935, -71.05748723613675]).addTo(map);
+
+
+// Driver Custom Image Icon
+var driver = L.icon({
+    iconUrl: './images/driver-1.png',
+    iconSize:     [70, 70], // size of the icon
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+L.marker([42.364875718764935, -71.05748723613675], {icon: driver}).addTo(map);
+
+
 /*
 Mapping
 L.Routing.control({
