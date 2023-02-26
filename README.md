@@ -18,7 +18,7 @@ We're especially proud of the fact that we were able to get all components of ou
 
 ## What we learned
 
-How to use new APIs, as well as deepened our understanding of HTML/CSS, Javascript and Python.
+How to use new APIs, as well as deepened our understanding of HTML/CSS, Javascript and Python. In order to implment SMS functionality to send a registration link, we used twillio to programmatically send a text message. The rideshare mapping platform uses advanced technologies such as pathfinding, leaflet.js, and ballot datasets from boston.gov.
 
 ## What's next for Drive the Vote
 The next step for Drive the Vote is expanding to other geographic regions beyond the Boston area. The need for transportation to vote is not a problem just confined to Boston so introducing service to as many areas as possible would increase the benefit to local communities. One feature we would be interested in implementing in the future would be to connect with an AI chatbot and include prompts that would allow the user to learn more about what would appear on their ballot. For example, a voter might not be familiar with what the state controller does or major donors who support a particular proposition. We could also direct the user to local news coverage of relevant political issues.
