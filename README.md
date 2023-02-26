@@ -9,6 +9,8 @@ Our project connects a need to a solution. The need is transportation to the pol
 ## How we built it
 
 ## Challenges we ran into
+Our goal in the Civic Tech Hackathon was to stretch our learning through the experimentation of new technologies. This was our first time working with the Twilio API with SMS messaging to notify individuals when they sign up to be a volunteer driver for polls. We ran into issues trying to link the Twilio API to our frontend where our Formspree API recognized that the sign up was submitted, but Twilio did not. We later figured out that our submit button was not linked directly to the TWilio API, so that's the notification did not send. Also, it was some of our first times working with Leaflet to create our interactive driver and poll location map. At first, we struggled to link the live car tracker to the following endpoints: driver location and poll location. After some time, we figured out how to integrate the live car tracker and linked it between the two endpoints through Leaflet's geolocation features.
+
 
 ## Accomplishments that we're proud of
 
