@@ -32,7 +32,7 @@ fetch('/lib/geojson/Polling_Locations.geojson')
             <p>`+ feature.properties.Location3 + `</p>
             <p>`+ (feature.properties.Voting_Room || " ") + `</p>
             `).openPopup();
-            ballotMarker.on('click', onMapClick);
+            ballotMarker.on('click', onBallotClick);
         }
      }
 });
@@ -52,7 +52,7 @@ function onLocationFound(e) {
   
 }
 
-function onMapClick(e) {
+function onBallotClick(e) {
     ballot = e.target;
     for (var i = 0; i < 5; i++) {
         var origin_lat = e.latlng.lat + (Math.random() - 0.5) / 50;

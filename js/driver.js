@@ -7,7 +7,6 @@ const driver = {
     _origin: null,
     _control: null,
     _marker: null,
-    called: false,
     service: "",
     name: "",
     car: "",
@@ -28,9 +27,6 @@ const driver = {
         this._control.addTo(map);
         this._control.hide();
     },
-    _call: function() {
-
-    },
 
     _simulate : function (duration){
         let simulatePromise = new Promise((resolve, reject) => {
@@ -49,7 +45,7 @@ const driver = {
             }
             var driverIco = L.icon({
                 iconUrl: "./images/car.png",
-                iconSize: [15, 15], // size of the icon
+                iconSize: [15, 15], 
               });
             this._marker = L.Marker.movingMarker(coordinateArray, duration, {
                 autostart: true,
