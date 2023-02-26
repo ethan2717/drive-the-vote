@@ -60,10 +60,9 @@ function onMapClick(e) {
         var dest_lat = origin_lat + (Math.random() - 0.5) / 50;
         var dest_lng = origin_lng + (Math.random() - 0.5) / 50;
         volunteerDriver = {...driver}
-        volunteerDriver.drive(L.latLng(origin_lat, origin_lng), L.latLng(dest_lat, dest_lng));
+        volunteerDriver.drive(L.latLng(origin_lat, origin_lng), L.latLng(dest_lat, dest_lng), 15000);
         drivers.splice(i, 0, volunteerDriver);
       }   
-     
   }
 
 function callDriver(){
