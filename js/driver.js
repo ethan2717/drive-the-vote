@@ -44,13 +44,12 @@ const driver = {
                 autostart: true,
                 icon: driverIco
                
-            });
-            map.addLayer(this._marker);
+            }); 
             this._marker.on('end', () => {    
                 document.dispatchEvent(new CustomEvent('driverarrived'));  
-                      
-                map.removeLayer(this.polyline)   
             });
+            this._marker.addTo(map);
+ 
         });
     },
 

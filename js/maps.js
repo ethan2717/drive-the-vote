@@ -1,8 +1,17 @@
-var map = L.map("map").setView([42.35532753176672, -71.06532863539319], 13);
+var map = L.map("map", {
+    center: [42.35532753176672, -71.06532863539319],
+    zoom: 13,
+}).setView([42.35532753176672, -71.06532863539319], 13);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "© OpenStreetMap contributors",
 }).addTo(map);
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: "© OpenStreetMap contributors",
+}).addTo(map);
+
+
 
 fetch('/lib/geojson/Polling_Locations.geojson')
 .then((response) => response.json())
@@ -10,7 +19,7 @@ fetch('/lib/geojson/Polling_Locations.geojson')
     var ballotIco = L.icon({
         iconUrl: "./images/voting-box.png",
         iconSize: [25, 25], // size of the icon
-      
+        popupAnchor: [0, -10],
       });
     for (var i=0; i < json.features.length; i++) {
         let feature = json.features[i];
@@ -22,17 +31,34 @@ fetch('/lib/geojson/Polling_Locations.geojson')
             ballotMarker.bindPopup(`
             <p>`+ feature.properties.Location2 + `</p>
             <p>`+ feature.properties.Location3 + `</p>
-            <p>`+ feature.properties.Voting_Room + `</p>
+            <p>`+ (feature.properties.Voting_Room || " ") + `</p>
             `).openPopup();
+            ballotMarker.on('click', onMapClick);
         }
      }
 });
 
+map.locate({setView: true, maxZoom: 16});
 
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: "© OpenStreetMap contributors",
-}).addTo(map);
+
+function onMapClick(e) {
+    volunteerDriver = {...driver}
+    var lat = e.latlng.lat + (Math.random() - 0.5) / 100;
+    var lng = e.latlng.lng + (Math.random() - 0.5) / 100;
+    volunteerDriver.drive(L.latLng(lat, lng), L.latLng((lat + (Math.random() - 0.5) / 150), (lng + (Math.random() - 0.5) / 150)), 30000);  
+  }
+  
+
+// define a function to handle the location found event
+function onLocationFound(e) {
+  var radius = e.accuracy / 2;
+
+  L.marker(e.latlng).addTo(map)
+    .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+  L.circle(e.latlng, radius).addTo(map);
+}
 
 // Circle ranges
 
