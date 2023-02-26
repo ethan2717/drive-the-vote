@@ -1,25 +1,25 @@
-# election-turnout-civic-tech
+#Drive the Vote - Connecting Voters to Polls with Civic Tech
 
-## Inspiration
-This project was inspired by the issue of low voter turnout. Many potential voters lack convenient transportation to get to a polling place. In fact, one 2016 [Harvard study](https://dataverse.harvard.edu/file.xhtml?persistentId=doi%3A10.7910%2FDVN%2FY38VIQ%2F2NJDL9&version=1.0) found that 14% of nonvoters said transportation was a "major factor" in why they did not vote in that election. This issue is of particular significance for low-income Americans, who are disproportionately Black, Latinx, Indigenous, immigrants, or LGBTQ; those in rural and suburban areas; and those who are elderly or disabled. Paired with oppressive restrictions on mail-in voting and the strategic shuttering of polling places in certain neighborhoods, this problem of lack of transportation creates the perfect storm of keeping some of the most vulnerable members of society from the ballot box.
+##Introduction
+Low voter turnout has been a persistent issue in American politics. In recent years, many potential voters have been unable to cast their ballots due to a lack of convenient transportation to polling places. This problem is particularly acute for low-income Americans, those in rural or suburban areas, the elderly, disabled, and members of marginalized communities who face systemic barriers to political participation. To address this issue, a team of civic tech enthusiasts created Drive the Vote, a web service that connects voters who need a ride to a polling place with nearby volunteer drivers, free of charge.
 
-## What it does
-Our project connects a need to a solution. The need is transportation to the polls. Our solution is a web service that allows voters who need a ride to a polling place to view nearby volunteer drivers and request a ride **completely free of charge**. Additional functionality includes a form to allow volunteers to sign up to drive, an option to donate money, and a link to register to vote if the user had not done so previously.
+##The Need for Drive the Vote
+According to a 2016 Harvard study, transportation is a significant factor in voter turnout. 14% of nonvoters cited transportation as a major reason why they did not vote in that election. This problem is even more pronounced for marginalized communities, who face additional barriers to accessing transportation. To compound the issue, there have been widespread efforts to suppress voting rights by imposing oppressive restrictions on mail-in voting and closing polling places in certain neighborhoods. Drive the Vote aims to provide a solution to this problem by connecting voters to volunteer drivers who can provide them with free rides to polling places.
 
-## How we built it
-We used `HTML`, `CSS`, `Bootstrap`, and `Javascript` to create the frontend and website UI/UX. For the interactive rideshare map, we utilized `Leaflet` and included custom markers linked between the volunteer drivers and the voting poll locations. The simulated drivers use pathfinding in order to realistically navigate the city of Boston. 
+##How Drive the Vote Works
+The Drive the Vote web service utilizes a user-friendly interface that allows voters who need a ride to a polling place to view nearby volunteer drivers and request a ride. The interactive rideshare map is powered by Leaflet, an open-source JavaScript library for mobile-friendly interactive maps. Custom markers on the map indicate the location of volunteer drivers and polling places. The system also includes a form that allows volunteers to sign up to drive, an option to donate money, and a link to register to vote for those who have not done so.
 
-## Challenges we ran into
-Our goal in the Civic Tech Hackathon was to stretch our learning through the experimentation of new technologies. This was our first time working with the Twilio API with SMS messaging to notify individuals when they sign up to be a volunteer driver for polls. We ran into issues trying to link the Twilio API to our frontend where our Formspree API recognized that the sign up was submitted, but Twilio did not. We later figured out that our submit button was not linked directly to the TWilio API, so that's the notification did not send. Also, it was some of our first times working with Leaflet to create our interactive driver and poll location map. At first, we struggled to link the live car tracker to the following endpoints: driver location and poll location. After some time, we figured out how to integrate the live car tracker and linked it between the two endpoints through Leaflet's geolocation features.
+##Challenges and Accomplishments
+The Drive the Vote team encountered several challenges during the development of their project. One of the biggest obstacles was integrating the Twilio API with SMS messaging to notify individuals when they signed up to be volunteer drivers. They also had to learn how to use Leaflet to create the interactive driver and polling location map. Despite these challenges, the team was able to overcome them and complete the project before the deadline. They are especially proud of their ability to combine the work of various APIs into a functional website that achieved its intended purpose.
+
+##What Drive the Vote Learned
+The Drive the Vote team learned several new skills and technologies during the development of their project. They deepened their understanding of HTML/CSS and JavaScript, and they also learned how to use new APIs such as Twilio for SMS messaging and Leaflet for interactive mapping. They also learned about pathfinding and ballot datasets from boston.gov.
+
+##Future Plans for Drive the Vote
+The Drive the Vote team plans to expand their service to other geographic regions beyond the Boston area. They recognize that transportation to polling places is a problem across the country and are committed to expanding their service to benefit as many communities as possible. They are also interested in exploring new features such as integrating an AI chatbot to provide voters with information about their ballot and directing them to relevant news coverage of political issues.
+
+##Conclusion
+Drive the Vote is a powerful example of civic tech in action. By connecting voters to volunteer drivers who can provide them with free rides to polling places, Drive the Vote is helping to address the issue of low voter turnout, particularly among marginalized communities. With plans to expand to other regions and introduce new features, Drive the Vote has the potential to make a significant impact on political participation in America.
 
 
-## Accomplishments that we're proud of
 
-We're especially proud of the fact that we were able to get all components of our project in a functional form before the deadline - after all the above challenges described, being able to have a website that incorporates the work of all the various new APIs, with each component functioning as intended is our best achievement. Having separated the tasks into different groups, we were able to combine our work effectively into this project.
-
-## What we learned
-
-How to use new APIs, as well as deepened our understanding of HTML/CSS, Javascript. In order to implment SMS functionality to send a registration link, we used twillio to programmatically send a text message. The rideshare mapping platform uses advanced technologies such as pathfinding, leaflet.js, and ballot datasets from boston.gov.
-
-## What's next for Drive the Vote
-The next step for Drive the Vote is expanding to other geographic regions beyond the Boston area. The need for transportation to vote is not a problem just confined to Boston so introducing service to as many areas as possible would increase the benefit to local communities. One feature we would be interested in implementing in the future would be to connect with an AI chatbot and include prompts that would allow the user to learn more about what would appear on their ballot. For example, a voter might not be familiar with what the state controller does or major donors who support a particular proposition. We could also direct the user to local news coverage of relevant political issues.
