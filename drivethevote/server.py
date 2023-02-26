@@ -24,7 +24,7 @@ async def on_email(request):
         smtp.ehlo()
         smtp.starttls()
         smtp.ehlo()
-        smtp.login("drivethevote2023@gmail.com", "atmkufdlfhgwrqre")
+        smtp.login("drivethevote2023@gmail.com", "qymhrmycyjavjngr")
         smtp.sendmail(
             "drivethevote2023@gmail.com",
             request.args.get("email-address"),
