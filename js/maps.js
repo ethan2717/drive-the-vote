@@ -1,19 +1,34 @@
 var map = L.map("map").setView([42.35532753176672, -71.06532863539319], 13);
 
-
-
-
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "© OpenStreetMap contributors",
 }).addTo(map);
 
-async function addGeoJson() {
-  const response = await fetch("/lib/geojson/Polling_Locations.geojson");
-  const data = await response.json();
-  L.geoJson(data).addTo(map);
-}
+fetch('/lib/geojson/Polling_Locations.geojson')
+.then((response) => response.json())
+.then((json) => {
+    var ballotIco = L.icon({
+        iconUrl: "./images/voting-box.png",
+        iconSize: [25, 25], // size of the icon
+      
+      });
+    for (var i=0; i < json.features.length; i++) {
+        let feature = json.features[i];
+        if (feature.geometry != null) {
+            let coordinates = feature.geometry.coordinates;
+            let ballotMarker = L.marker([coordinates[1], coordinates[0]], {
+                icon: ballotIco
+            }).addTo(map);
+            ballotMarker.bindPopup(`
+            <p>`+ feature.properties.Location2 + `</p>
+            <p>`+ feature.properties.Location3 + `</p>
+            <p>`+ feature.properties.Voting_Room + `</p>
+            `).openPopup();
+        }
+     }
+});
 
-addGeoJson();
+
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "© OpenStreetMap contributors",
