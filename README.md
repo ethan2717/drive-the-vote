@@ -27,9 +27,9 @@
   <p align="center">
     Connecting Voters to Polls with Civic Tech
     <br />
-    <a href="https://github.com/sunset-developer/ulibsync/issues">Report Bug</a>
+    <a href="https://github.com/msaini26/election-turnout-civic-tech/issues">Report Bug</a>
     ·
-    <a href="https://github.com/sunset-developer/ulibsync/pulls">Request Feature</a>
+    <a href="https://github.com/msaini26/election-turnout-civic-tech/pulls">Request Feature</a>
   </p>
 </p>
 
