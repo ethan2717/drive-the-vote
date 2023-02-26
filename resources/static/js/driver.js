@@ -45,7 +45,7 @@ const driver = {
             }
             var driverIco = L.icon({
                 iconUrl: "./images/car.png",
-                iconSize: [18, 18], 
+                iconSize: [20, 20], 
                 popupAnchor: [0, -10],
               });
             this._marker = L.Marker.movingMarker(coordinateArray, duration, {

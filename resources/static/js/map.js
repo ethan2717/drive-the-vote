@@ -41,7 +41,7 @@ fetch('/lib/geojson/Polling_Locations.geojson')
 });
 
 /*
-/Obtains an approximation of our current location. 
+//Approxiate current location.
 map.locate({maxZoom: 16});
 
 map.on('locationfound', (e) => {
@@ -50,7 +50,7 @@ map.on('locationfound', (e) => {
 });
 */
 
-currentLocation = L.marker([42.35007151891168, -71.10320864448539]).addTo(mymap);
+currentLocation = L.marker([42.35003187356235, -71.10328374633661]).addTo(map);
 currentLocation.bindPopup("You are approximately here!").openPopup();
 
 function locateDrivers(){
