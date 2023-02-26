@@ -44,7 +44,7 @@ map.locate({maxZoom: 16});
 
 map.on('locationfound', (e) => {
     currentLocation = L.marker(e.latlng).addTo(map);
-    currentLocation.bindPopup("You are here!").openPopup();
+    currentLocation.bindPopup("You are approximately here!").openPopup();
 });
 
 
