@@ -76,7 +76,7 @@ To get a local copy up and running follow these simple steps.
 
 * Clone the repo.
 ```sh
-https://github.com/sunset-developer/ulibsync
+https://github.com/msaini26/election-turnout-civic-tech
 ```
 * Install Python
 
