@@ -2,6 +2,7 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+import openai
 from sanic import Sanic, text
 
 app = Sanic("DriveTheVote")
@@ -31,6 +32,12 @@ async def on_email(request):
             msg.as_string(),
         )
     return text("Email sent!")
+
+@app.post("/chat")
+async def on_chat(request):
+    openai.api_key = request.args.get("key")
+    completion = openai.Completion.create(engine="text-davinci-003", prompt=request.args.get("input"), max_tokens=1000)
+    return text(completion.choices[0]['text'])
 
 
 app.static("/", "resources/static")
