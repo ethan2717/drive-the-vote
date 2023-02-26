@@ -227,6 +227,119 @@ https://templatemo.com/tm-583-festava-live
                                     <input type="submit" value="Submit">
                                     
                                 </form>
+                                <style>/* reset */
+                                    #fs-frm input,
+                                    #fs-frm select,
+                                    #fs-frm textarea,
+                                    #fs-frm fieldset,
+                                    #fs-frm optgroup,
+                                    #fs-frm label,
+                                    #fs-frm #card-element:disabled {
+                                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                                    font-size: 100%;
+                                    color: inherit;
+                                    border: none;
+                                    border-radius: 0;
+                                    display: block;
+                                    width: 60%;
+                                    padding: 0;
+                                    margin: none;
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    border-radius: .15rem;
+
+                                    }
+                                    #fs-frm label,
+                                    #fs-frm legend,
+                                    #fs-frm ::placeholder {
+                                    font-size: 1.1rem;
+                                    margin-bottom: .2rem;
+                                    padding-top: .2rem;
+                                    display: flex;
+                                    align-items: baseline;
+                                    
+                                    }
+                                    
+                                    /* border, padding, margin, width */
+                                    #fs-frm input,
+                                    #fs-frm select,
+                                    #fs-frm textarea,
+                                    #fs-frm #card-element {
+                                    border: 1px solid rgba(0,0,0,0.2);
+                                    background-color: rgba(255,255,255,0.9);
+                                    padding: 1em 1rem;
+                                    margin-bottom: 1.5rem;
+                                    
+                                    }
+                                    #fs-frm input:focus,
+                                    #fs-frm select:focus,
+                                    #fs-frm textarea:focus {
+                                    background-color: white;
+                                    outline-style: solid;
+                                    outline-width: thin;
+                                    outline-color: gray;
+                                    outline-offset: -1px;
+                                    }
+                                    #fs-frm [type="text"],
+                                    #fs-frm [type="email"] {
+                                    width: 100%;
+                                    border-radius: .15rem;
+                                    }
+                                    #fs-frm [type="button"],
+                                    #fs-frm [type="submit"],
+                                    #fs-frm [type="reset"] {
+                                    width: auto;
+                                    cursor: pointer;
+                                    -webkit-appearance: button;
+                                    -moz-appearance: button;
+                                    appearance: button;
+                                    }
+                                    #fs-frm [type="button"]:focus,
+                                    #fs-frm [type="submit"]:focus,
+                                    #fs-frm [type="reset"]:focus {
+                                    outline: none;
+                                    }
+                                    #fs-frm [type="submit"],
+                                    #fs-frm [type="reset"] {
+                                    margin-bottom: 40;
+                                    }
+                                    #fs-frm select {
+                                    text-transform: none;
+                                    }
+                                    
+                                    #fs-frm [type="checkbox"] {
+                                    -webkit-appearance: checkbox;
+                                    -moz-appearance: checkbox;
+                                    appearance: checkbox;
+                                    display: inline-block;
+                                    width: auto;
+                                    margin: 0 .5em 0 0 !important;
+                                    }
+                                    
+                                    #fs-frm [type="radio"] {
+                                    -webkit-appearance: radio;
+                                    -moz-appearance: radio;
+                                    appearance: radio;
+                                    }
+                                    
+                                    /* address, locale */
+                                    #fs-frm fieldset.locale input[name="full-name"],
+                                    #fs-frm fieldset.locale select[name="email-address"],
+                                    #fs-frm fieldset.locale input[name="phone_number"] {
+                                    display: inline;
+                                    }
+                                    #fs-frm fieldset.locale input[name="full-name"] {
+                                    width: 52%;
+                                    }
+                                    #fs-frm fieldset.locale select[name="email-address"],
+                                    #fs-frm fieldset.locale input[name="phone_number"] {
+                                    width: 20%;
+                                    }
+                                    #fs-frm fieldset.locale input[name="full-name"],
+                                    #fs-frm fieldset.locale select[name="email-address"] {
+                                    margin-right: 3%;
+                                    }
+                                    </style>
                                 
                                     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
                                     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
@@ -261,13 +374,13 @@ https://templatemo.com/tm-583-festava-live
                                           var message = document.getElementById('message').value;
                                       
                                           // Use the Twilio REST API to send the SMS message
-                                          fetch('https://api.twilio.com/2010-04-01/Accounts/AC505469728a3776edaf584af8befb9d2b/Messages.json', {
+                                          fetch('https://api.twilio.com/2010-04-01/Accounts/AC75b97db0919b0ed06ac28299c9ca25e5/Messages.json', {
                                             method: 'POST',
                                             headers: {
                                               'Content-Type': 'application/x-www-form-urlencoded'
                                             },
-                                            body: 'To=' + encodeURIComponent(to) + '&From=18884870108' + '&Body=' + encodeURIComponent(message),
-                                            auth: 'YOUR_ACCOUNT_SID:79914f360f71a2426d6ed38656373acf'
+                                            body: 'To=' + encodeURIComponent(to) + '&From=18449184616' + '&Body=' + encodeURIComponent(message),
+                                            auth: 'YOUR_ACCOUNT_SID:d6645a63327870d8e654b597bb8a80f6'
                                           })
                                           .then(function(response) {
                                             return response.json();
@@ -284,119 +397,7 @@ https://templatemo.com/tm-583-festava-live
                                             <br>
                                             <input id = "submitbutton" type="submit">
                                           </form>
-                                          <style>/* reset */
-                                            #fs-frm input,
-                                            #fs-frm select,
-                                            #fs-frm textarea,
-                                            #fs-frm fieldset,
-                                            #fs-frm optgroup,
-                                            #fs-frm label,
-                                            #fs-frm #card-element:disabled {
-                                            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                                            font-size: 100%;
-                                            color: inherit;
-                                            border: none;
-                                            border-radius: 0;
-                                            display: block;
-                                            width: 60%;
-                                            padding: 0;
-                                            margin: none;
-                                            -webkit-appearance: none;
-                                            -moz-appearance: none;
-                                            border-radius: .15rem;
-
-                                            }
-                                            #fs-frm label,
-                                            #fs-frm legend,
-                                            #fs-frm ::placeholder {
-                                            font-size: 1.1rem;
-                                            margin-bottom: .2rem;
-                                            padding-top: .2rem;
-                                            display: flex;
-                                            align-items: baseline;
-                                            
-                                            }
-                                            
-                                            /* border, padding, margin, width */
-                                            #fs-frm input,
-                                            #fs-frm select,
-                                            #fs-frm textarea,
-                                            #fs-frm #card-element {
-                                            border: 1px solid rgba(0,0,0,0.2);
-                                            background-color: rgba(255,255,255,0.9);
-                                            padding: 1em 1rem;
-                                            margin-bottom: 1.5rem;
-                                            
-                                            }
-                                            #fs-frm input:focus,
-                                            #fs-frm select:focus,
-                                            #fs-frm textarea:focus {
-                                            background-color: white;
-                                            outline-style: solid;
-                                            outline-width: thin;
-                                            outline-color: gray;
-                                            outline-offset: -1px;
-                                            }
-                                            #fs-frm [type="text"],
-                                            #fs-frm [type="email"] {
-                                            width: 100%;
-                                            border-radius: .15rem;
-                                            }
-                                            #fs-frm [type="button"],
-                                            #fs-frm [type="submit"],
-                                            #fs-frm [type="reset"] {
-                                            width: auto;
-                                            cursor: pointer;
-                                            -webkit-appearance: button;
-                                            -moz-appearance: button;
-                                            appearance: button;
-                                            }
-                                            #fs-frm [type="button"]:focus,
-                                            #fs-frm [type="submit"]:focus,
-                                            #fs-frm [type="reset"]:focus {
-                                            outline: none;
-                                            }
-                                            #fs-frm [type="submit"],
-                                            #fs-frm [type="reset"] {
-                                            margin-bottom: 40;
-                                            }
-                                            #fs-frm select {
-                                            text-transform: none;
-                                            }
-                                            
-                                            #fs-frm [type="checkbox"] {
-                                            -webkit-appearance: checkbox;
-                                            -moz-appearance: checkbox;
-                                            appearance: checkbox;
-                                            display: inline-block;
-                                            width: auto;
-                                            margin: 0 .5em 0 0 !important;
-                                            }
-                                            
-                                            #fs-frm [type="radio"] {
-                                            -webkit-appearance: radio;
-                                            -moz-appearance: radio;
-                                            appearance: radio;
-                                            }
-                                            
-                                            /* address, locale */
-                                            #fs-frm fieldset.locale input[name="full-name"],
-                                            #fs-frm fieldset.locale select[name="email-address"],
-                                            #fs-frm fieldset.locale input[name="phone_number"] {
-                                            display: inline;
-                                            }
-                                            #fs-frm fieldset.locale input[name="full-name"] {
-                                            width: 52%;
-                                            }
-                                            #fs-frm fieldset.locale select[name="email-address"],
-                                            #fs-frm fieldset.locale input[name="phone_number"] {
-                                            width: 20%;
-                                            }
-                                            #fs-frm fieldset.locale input[name="full-name"],
-                                            #fs-frm fieldset.locale select[name="email-address"] {
-                                            margin-right: 3%;
-                                            }
-                                            </style>
+                                          
                                           <script>
                                             var form = document.getElementById('send-sms');
                                             form.addEventListener('submit', function(event) {
@@ -404,6 +405,8 @@ https://templatemo.com/tm-583-festava-live
                                                 console.log('submitting')
                                               var to = document.getElementById('phone_number').value;
                                               console.log({to})
+                                              //window.alert(to);
+
                                             //   var message = document.getElementById('message').value;
                                               var message = "Thank you for registering to volunteer for our program! Save this number to recieve future updates and pickup information!"
                                               
@@ -415,7 +418,7 @@ https://templatemo.com/tm-583-festava-live
                                                 headers: {
                                                   'Content-Type': 'application/x-www-form-urlencoded',
                                                 //   'Content-Type': 'application/json',
-                                                  "Authorization":`Basic ${btoa('AC75b97db0919b0ed06ac28299c9ca25e5:79914f360f71a2426d6ed38656373acf')}`
+                                                  "Authorization":`Basic ${btoa('AC75b97db0919b0ed06ac28299c9ca25e5:d6645a63327870d8e654b597bb8a80f6')}`
                                                 },
                                                 body
                                               })
