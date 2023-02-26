@@ -422,6 +422,50 @@ strong {
   padding-bottom: 39px;
 }
 
+#phone_number {
+  margin-left: -0.9rem;
+  margin-bottom: -0.9rem;
+  font-size: 1.1rem;
+  padding: 1rem;
+  width: 63%;
+  border-color: #c3c3c3;
+  border-style: solid;
+  border-radius: 0.15rem;
+  border-width: 0.075rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bext {
+  font-size: 1.1rem;
+  margin-left: -8.2rem;
+  margin-bottom: 0.3rem;
+  color: black;
+  font-weight: 350;
+  
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#submit{
+  font-size: 900rem;
+}
+
+#submitbutton{
+  border-color: #cdcbcb;
+  border-style: solid;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: rgba(255, 255, 255, 0.973);
+  margin-top: 0.7rem;
+  margin-right: 0.4rem;
+  width: 10%;
+  padding: 1rem;
+  padding-left: 1.2rem;
+  margin-left: -0.9rem;
+  padding-right: 4.2rem;
+  font-size: 100%;
+  text-align: left;
+  border-width: 0.075rem;
+  border-radius: 0.15rem;
+}
 
 /*---------------------------------------
   NAVIGATION              
