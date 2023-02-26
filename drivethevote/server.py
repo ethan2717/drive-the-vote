@@ -37,9 +37,10 @@ async def on_email(request):
 @app.post("/chat")
 async def on_chat(request):
     openai.api_key = request.args.get("key")
-    completion = openai.Completion.create(engine="text-davinci-003", prompt=request.args.get("input"),
-                                          max_tokens=1000)
-    return text(completion.choices[0]['text'])
+    completion = openai.Completion.create(
+        engine="text-davinci-003", prompt=request.args.get("input"), max_tokens=1000
+    )
+    return text(completion.choices[0]["text"])
 
 
 app.static("/", "resources/static")
