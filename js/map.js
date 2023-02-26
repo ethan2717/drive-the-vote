@@ -48,8 +48,7 @@ function onLocationFound(e) {
         });
     } else {
         console.log("Geolocation is not available.");
-    }
-  
+    } 
 }
 
 function onBallotClick(e) {
