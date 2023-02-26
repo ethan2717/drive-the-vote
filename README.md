@@ -14,11 +14,11 @@ Our goal in the Civic Tech Hackathon was to stretch our learning through the exp
 
 ## Accomplishments that we're proud of
 
-We're especially proud of the fact that we were able to get all components of our project in a functional form before the deadline - after all the above challenges described, being able to have a website that incorporates the work of all the various new APIs, with each component functioning as intended is our best achievement. Having separated the tasks into different groups, we were able to combine our work effectively into this project
+We're especially proud of the fact that we were able to get all components of our project in a functional form before the deadline - after all the above challenges described, being able to have a website that incorporates the work of all the various new APIs, with each component functioning as intended is our best achievement. Having separated the tasks into different groups, we were able to combine our work effectively into this project.
 
 ## What we learned
 
-How to use new APIs, as well as deepened our understanding of HTML/CSS, Javascript and Python
+How to use new APIs, as well as deepened our understanding of HTML/CSS, Javascript and Python.
 
 ## What's next for Drive the Vote
 The next step for Drive the Vote is expanding to other geographic regions beyond the Boston area. The need for transportation to vote is not a problem just confined to Boston so introducing service to as many areas as possible would increase the benefit to local communities. One feature we would be interested in implementing in the future would be to connect with an AI chatbot and include prompts that would allow the user to learn more about what would appear on their ballot. For example, a voter might not be familiar with what the state controller does or major donors who support a particular proposition. We could also direct the user to local news coverage of relevant political issues.
