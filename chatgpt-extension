@@ -1,7 +1,0 @@
-import os
-import openai
-openai.api_key = "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"
-openai.Model.list()
-inputtext = "hello chat GPT bot!"
-completion = openai.Completion.create(engine="text-davinci-003", prompt=inputtext, max_tokens=1000)
-print(completion.choices[0]['text'])
