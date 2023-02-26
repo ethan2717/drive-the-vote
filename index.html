@@ -401,15 +401,15 @@ https://templatemo.com/tm-583-festava-live
                                             //   var message = document.getElementById('message').value;
                                               var message = "Thank you for registering to volunteer for our program! Save this number to recieve future updates and pickup information!"
                                               
-                                              var body = 'To=' + to + '&From=18449184616' + '&Body=' + encodeURIComponent(message)
+                                              var body = 'To=' + to + '&From=18339023454' + '&Body=' + encodeURIComponent(message)
                                               console.log({body})
                                               // Use the Twilio REST API to send the SMS message
-                                              fetch('https://api.twilio.com/2010-04-01/Accounts/AC75b97db0919b0ed06ac28299c9ca25e5/Messages.json', {
+                                              fetch('https://api.twilio.com/2010-04-01/Accounts/AC870439cd29cabe822e4e17781667e637/Messages.json', {
                                                 method: 'POST',
                                                 headers: {
                                                   'Content-Type': 'application/x-www-form-urlencoded',
                                                 //   'Content-Type': 'application/json',
-                                                  "Authorization":`Basic ${btoa('AC75b97db0919b0ed06ac28299c9ca25e5:d6645a63327870d8e654b597bb8a80f6')}`
+                                                  "Authorization":`Basic ${btoa('AC870439cd29cabe822e4e17781667e637:a8cf34acfa26df775d01c56c8a179d25')}`
                                                 },
                                                 body
                                               })
