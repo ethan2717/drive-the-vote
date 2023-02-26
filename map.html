@@ -11,10 +11,18 @@
     <link rel="stylesheet" href="css/maps.css" />
 </head>
 <body>
-    <button id="refreshButton">Refresh Button</button>
+   
     <div id="map" class="map">
   
-   
+        <button onclick="javascript:callDriver()">Call A Ride To Vote!</button>
+        <style>
+          button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1001;
+          }
+        </style>
 </body>
 <footer>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>

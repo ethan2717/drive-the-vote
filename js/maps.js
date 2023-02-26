@@ -3,7 +3,9 @@ var map = L.map("map", {
     zoom: 13,
 }).setView([42.35532753176672, -71.06532863539319], 13);
 
-var existingDrivers = []
+var drivers = [];
+var ballot = null;
+var currentLocation;
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "© OpenStreetMap contributors",
@@ -35,87 +37,45 @@ fetch('/lib/geojson/Polling_Locations.geojson')
      }
 });
 
-function onMapClick(e) {
-    for (var i = 0; i < 5; i++) {
-        var origin_lat = e.latlng.lat + (Math.random() - 0.5) / 100;
-        var origin_lng = e.latlng.lng + (Math.random() - 0.5) / 100;
-        var dest_lat = origin_lat + (Math.random() - 0.5) / 100;
-        var dest_lng = origin_lng + (Math.random() - 0.5) / 100;
-        volunteerDriver = {...driver}
-        volunteerDriver.drive(L.latLng(origin_lat, origin_lng), L.latLng(dest_lat, dest_lng), 30000);
-      }
-  }
+map.locate({setView: true, maxZoom: 16});
 
+map.on('locationfound', onLocationFound);
 
-
-// define a function to handle the location found event
 function onLocationFound(e) {
-  var radius = e.accuracy / 2;
-
-  L.marker(e.latlng).addTo(map)
-    .bindPopup("You are within " + radius + " meters from this point").openPopup();
-
-  L.circle(e.latlng, radius).addTo(map);
+    if ("geolocation" in navigator) {
+        navigator.geolocation.watchPosition(function(position) {
+            currentLocation = L.marker([position.coords.latitude, position.coords.longitude]).addTo(map);
+        });
+    } else {
+        console.log("Geolocation is not available.");
+    }
+  
 }
 
-// Circle ranges
+function onMapClick(e) {
+    ballot = e.target;
+    for (var i = 0; i < 5; i++) {
+        var origin_lat = e.latlng.lat + (Math.random() - 0.5) / 50;
+        var origin_lng = e.latlng.lng + (Math.random() - 0.5) / 50;
+        var dest_lat = origin_lat + (Math.random() - 0.5) / 50;
+        var dest_lng = origin_lng + (Math.random() - 0.5) / 50;
+        volunteerDriver = {...driver}
+        volunteerDriver.drive(L.latLng(origin_lat, origin_lng), L.latLng(dest_lat, dest_lng));
+        drivers.splice(i, 0, volunteerDriver);
+      }   
+     
+  }
 
-// North End
-L.circle([42.364875718764935, -71.05748723613675], {
-  color: "red",
-  fillColor: "#f03",
-  fillOpacity: 0.5,
-  radius: 600,
-}).addTo(map);
+function callDriver(){
+    volunteerDriver = {...driver}
+    var origin_lat = ballot.getLatLng().lat + (Math.random() - 0.5) / 150;
+    var origin_lng = ballot.getLatLng().lng + (Math.random() - 0.5) / 150;
+    volunteerDriver.drive(L.latLng(origin_lat, origin_lng), L.latLng(currentLocation.getLatLng().lat, currentLocation.getLatLng().lng));
+    document.addEventListener('driverarrived', (e) => {
+        if (e.detail.name == volunteerDriver.name) {
+            volunteerDriver.drive(L.latLng(currentLocation.getLatLng().lat, currentLocation.getLatLng().lng), L.latLng(origin_lat, origin_lng), 25000);
+        }
+    });
+}
 
-// South End
-L.circle([42.34674940884878, -71.07475632508151], {
-  color: "red",
-  fillColor: "#f03",
-  fillOpacity: 0.5,
-  radius: 600,
-}).addTo(map);
-
-// South Boston
-L.circle([42.33852674540022, -71.05110391975197], {
-  color: "red",
-  fillColor: "#f03",
-  fillOpacity: 0.5,
-  radius: 600,
-}).addTo(map);
-
-// Driver icon class
-var DriverIcon = L.Icon.extend({
-  options: {
-    iconUrl: "./images/driver-1.png",
-    iconSize: [70, 70], // size of the icon
-  },
-});
-
-// Driver icon objects
-var northDriver = new DriverIcon({}),
-  southDriver = new DriverIcon({}),
-  southEndDriver = new DriverIcon({});
-
-// Display driver objects on map
-L.marker([42.364875718764935, -71.05748723613675], { icon: northDriver })
-  .addTo(map)
-  .bindPopup("130 Endicott St, Boston, MA 02113");
-L.marker([42.33852674540022, -71.05110391975197], { icon: southDriver })
-  .addTo(map)
-  .bindPopup("245 D St, South Boston, MA 02127");
-L.marker([42.34674940884878, -71.07475632508151], { icon: southDriver })
-  .addTo(map)
-  .bindPopup("303 Columbus Ave, Boston, MA 02116");
-
-// Driver Custom Image Icon
-var driverIco = L.icon({
-  iconUrl: "./images/driver-1.png",
-  iconSize: [70, 70], // size of the icon
-  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
-});
-
-L.marker([42.364875718764935, -71.05748723613675], { icon: driverIco }).addTo(
-  map
-);
 
