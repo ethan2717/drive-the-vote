@@ -1,8 +1,17 @@
+var names = ['Sophia', 'Ethan', 'Ava', 'Jackson', 'Olivia', 'Aiden', 'Emma', 'Lucas', 'Mia', 'Liam'];
+var services = ["Uber", "Lyft", "Taxi"]
+var cars = ['SUV', 'Sedan', 'Coupe', 'Hatchback', 'Convertible', 'Pickup Truck', 'Sports Car', 'Minivan', 'Station Wagon', 'Electric Car'];
+var licensePlates = ['ABCD-123', 'GHIJ-456', 'MNOP-789', 'WXYZ-321', 'JKL-654', 'VWX-987', 'STU-246', 'DEF-135', 'PQR-680', 'LMN-925'];
+
 const driver = {
     _origin: null,
     _control: null,
     _marker: null,
-    available: Math.random() < 0.5,
+    called: false,
+    service: "",
+    name: "",
+    car: "",
+    licensePlate: "",
 
     _route: function (origin, destination){
         if (this._origin != null && this._origin.lat == origin.lat && this._origin.lng == origin.lng != null)
@@ -18,6 +27,9 @@ const driver = {
         })
         this._control.addTo(map);
         this._control.hide();
+    },
+    _call: function() {
+
     },
 
     _simulate : function (duration){
@@ -38,7 +50,6 @@ const driver = {
             var driverIco = L.icon({
                 iconUrl: "./images/car.png",
                 iconSize: [15, 15], // size of the icon
-                popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
               });
             this._marker = L.Marker.movingMarker(coordinateArray, duration, {
                 autostart: true,
@@ -46,10 +57,24 @@ const driver = {
                
             }); 
             this._marker.on('end', () => {    
-                document.dispatchEvent(new CustomEvent('driverarrived'));  
+                if (this.called != true)
+                    map.removeLayer(this._marker)
+                document.dispatchEvent(new CustomEvent('driverarrived', {name: this.name}));     
             });
+            if (this.name == "" && this.service == ""){
+                this.name = names[Math.floor(Math.random() * names.length)]
+                this.service = services[Math.floor(Math.random() * services.length)]
+                this.car = cars[Math.floor(Math.random() * cars.length)]
+                this.licensePlate = licensePlates[Math.floor(Math.random() * licensePlates.length)]
+            }
+            this._marker.bindPopup(`
+            Rideshare Service: `+ this.service + ` <br>
+            Name: `+ this.name + `<br>
+            Car: `+ this.car + `<br>
+            License Plate: `+ this.licensePlate + `<br>
+            
+            `).openPopup();
             this._marker.addTo(map);
- 
         });
     },
 
@@ -58,4 +83,9 @@ const driver = {
         this._simulate(duration)
     }
 }
+
+document.addEventListener('drivercalled', (e) => {
+    console.log(e.detail.driver)
+
+});
 

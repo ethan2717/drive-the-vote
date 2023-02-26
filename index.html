@@ -28,39 +28,27 @@
 
     <link href="css/templatemo-festava-live.css" rel="stylesheet">
 
-    <link href="css/popup.css" rel="stylesheet>"
-
-    <!--
-
-TemplateMo 583 Festava Live
-
-https://templatemo.com/tm-583-festava-live
-
--->
-
+    <link href="css/popup.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <link rel="stylesheet" href="lib/leaflet-routing-machine-3.2.12/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="css/maps.css" />
 </head>
 
 <body>
 
     <main>
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p><a class="nav-link click-scroll" href="#section_5">Click here to donate to support the cause!</a></p>
-        </div>
-
-        </div> 
-
+        
         <header class="site-header">
             <div class="container">
                 <div class="row">
 
                     <div class="col-lg-12">
                         <p class="d-flex">
-                            <strong class="text-dark"></strong>
+                            <strong class="text-dark">
+                                
+                            </strong>
                         </p>
                     </div>
 
@@ -165,7 +153,7 @@ https://templatemo.com/tm-583-festava-live
             </div>
         </section>
 
-            <section class="pricing-section section-padding section-bg" id="section_4">
+        <section class="pricing-section section-padding section-bg" id="section_4">
             <div class="container">
                 <div class="row">
 
@@ -206,9 +194,28 @@ https://templatemo.com/tm-583-festava-live
                         
                         </div>
                     </div>
-        <div></div>
+            <div>
+                
+                <div class="container">
+                    <div class="row">
+    
+                        <div class="col-lg-12 col-12 mx-auto">
+                            <h2 class="text-center mb-4">Our Rideshare Platform</h2>
+                        </div>
+    
+                    
+                        <div class="pricing-thumb">
+    
+                            <div id="map" class="map"></div>
+                              
+                           
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
         
-        
+          
        
              <section class="volunteer-section section-padding" id="section_4">
                 <div class="container">
@@ -230,6 +237,7 @@ https://templatemo.com/tm-583-festava-live
                                     <input type="submit" value="Submit">
                                     
                                 </form>
+                            
                                 <style>/* reset */
                                     #fs-frm input,
                                     #fs-frm select,
@@ -349,6 +357,7 @@ https://templatemo.com/tm-583-festava-live
     </div>
         
         </section>
+       
     </main>
 
 
@@ -428,6 +437,11 @@ T e m p l a t e M o
     <script src="js/click-scroll.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/popup.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="lib/leaflet-routing-machine-3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script src="js/movingmarker.js"></script>
+    <script src="js/driver.js"></script>
+    <script src="js/maps.js"></script>
 
     
 </body>

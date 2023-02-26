@@ -3,14 +3,11 @@ var map = L.map("map", {
     zoom: 13,
 }).setView([42.35532753176672, -71.06532863539319], 13);
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: "© OpenStreetMap contributors",
-}).addTo(map);
+var existingDrivers = []
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "© OpenStreetMap contributors",
 }).addTo(map);
-
 
 
 fetch('/lib/geojson/Polling_Locations.geojson')
@@ -38,17 +35,18 @@ fetch('/lib/geojson/Polling_Locations.geojson')
      }
 });
 
-map.locate({setView: true, maxZoom: 16});
-
-
-
 function onMapClick(e) {
-    volunteerDriver = {...driver}
-    var lat = e.latlng.lat + (Math.random() - 0.5) / 100;
-    var lng = e.latlng.lng + (Math.random() - 0.5) / 100;
-    volunteerDriver.drive(L.latLng(lat, lng), L.latLng((lat + (Math.random() - 0.5) / 150), (lng + (Math.random() - 0.5) / 150)), 30000);  
+    for (var i = 0; i < 5; i++) {
+        var origin_lat = e.latlng.lat + (Math.random() - 0.5) / 100;
+        var origin_lng = e.latlng.lng + (Math.random() - 0.5) / 100;
+        var dest_lat = origin_lat + (Math.random() - 0.5) / 100;
+        var dest_lng = origin_lng + (Math.random() - 0.5) / 100;
+        volunteerDriver = {...driver}
+        volunteerDriver.drive(L.latLng(origin_lat, origin_lng), L.latLng(dest_lat, dest_lng), 30000);
+      }
   }
-  
+
+
 
 // define a function to handle the location found event
 function onLocationFound(e) {
