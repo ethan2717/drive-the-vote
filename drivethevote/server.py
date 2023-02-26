@@ -10,17 +10,26 @@ app = Sanic("DriveTheVote")
 @app.post("/email")
 async def on_email(request):
     msg = MIMEMultipart()
-    msg['From'] = "drivethevote2023@gmail.com"
-    msg['To'] = request.args.get("email")
-    msg['Subject'] = "Thanks for registering!"
-    msg.attach(MIMEText(f"Thank you for registering to become a volunteer {request.args.get('full-name')}! Our sign up "
-                        f"form is under construction, so keep a lookout for future emails!", 'plain'))
-    with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
+    msg["From"] = "drivethevote2023@gmail.com"
+    msg["To"] = request.args.get("email")
+    msg["Subject"] = "Thanks for registering!"
+    msg.attach(
+        MIMEText(
+            f"Thank you for registering to become a volunteer {request.args.get('full-name')}! Keep a "
+            f"lookout for future emails!",
+            "plain",
+        )
+    )
+    with smtplib.SMTP("smtp.gmail.com", 587) as smtp:
         smtp.ehlo()
         smtp.starttls()
         smtp.ehlo()
         smtp.login("drivethevote2023@gmail.com", "atmkufdlfhgwrqre")
-        smtp.sendmail("drivethevote2023@gmail.com", request.args.get("email-address"), msg.as_string())
+        smtp.sendmail(
+            "drivethevote2023@gmail.com",
+            request.args.get("email-address"),
+            msg.as_string(),
+        )
     return text("Email sent!")
 
 

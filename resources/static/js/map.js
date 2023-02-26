@@ -63,7 +63,7 @@ function locateDrivers(){
         var dest_lat = origin_lat + (Math.random() - 0.5) / 50;
         var dest_lng = origin_lng + (Math.random() - 0.5) / 50;
         volunteerDriver = {...driver}
-        volunteerDriver.drive(L.latLng(origin_lat, origin_lng), L.latLng(dest_lat, dest_lng), 15000);
+        volunteerDriver.drive(L.latLng(origin_lat, origin_lng), L.latLng(dest_lat, dest_lng), 10000);
         drivers.splice(i, 0, volunteerDriver);
     } 
     setTimeout(() => {
@@ -79,7 +79,7 @@ function requestDriver(){
     volunteerDriver.drive(L.latLng(origin_lat, origin_lng), L.latLng(currentLocation.getLatLng().lat, currentLocation.getLatLng().lng));
     document.addEventListener('driverarrived', (e) => {
         if (e.detail.name == volunteerDriver.name) {
-            volunteerDriver.drive(L.latLng(currentLocation.getLatLng().lat, currentLocation.getLatLng().lng), L.latLng(ballot.getLatLng().lat, ballot.getLatLng().lng), 16000);
+            volunteerDriver.drive(L.latLng(currentLocation.getLatLng().lat, currentLocation.getLatLng().lng), L.latLng(ballot.getLatLng().lat, ballot.getLatLng().lng), 10000);
         }
     });
 }

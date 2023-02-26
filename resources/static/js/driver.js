@@ -1,5 +1,5 @@
 var names = ['Sophia', 'Ethan', 'Ava', 'Jackson', 'Olivia', 'Aiden', 'Emma', 'Lucas', 'Mia', 'Liam'];
-var services = ["Uber", "Lyft", "Taxi"]
+var services = ["Uber", "Lyft", "Taxi", "Volunteer"]
 var cars = ['SUV', 'Sedan', 'Coupe', 'Hatchback', 'Convertible', 'Pickup Truck', 'Sports Car', 'Minivan', 'Station Wagon', 'Electric Car'];
 var licensePlates = ['ABCD-123', 'GHIJ-456', 'MNOP-789', 'WXYZ-321', 'JKL-654', 'VWX-987', 'STU-246', 'DEF-135', 'PQR-680', 'LMN-925'];
 
