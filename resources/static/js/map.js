@@ -40,13 +40,18 @@ fetch('/lib/geojson/Polling_Locations.geojson')
      }
 });
 
+/*
+/Obtains an approximation of our current location. 
 map.locate({maxZoom: 16});
 
 map.on('locationfound', (e) => {
     currentLocation = L.marker(e.latlng).addTo(map);
     currentLocation.bindPopup("You are approximately here!").openPopup();
 });
+*/
 
+currentLocation = L.marker([42.35007151891168, -71.10320864448539]).addTo(mymap);
+currentLocation.bindPopup("You are approximately here!").openPopup();
 
 function locateDrivers(){
     var currentCenter = map.getCenter();
