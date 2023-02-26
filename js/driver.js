@@ -53,13 +53,12 @@ const driver = {
               });
             this._marker = L.Marker.movingMarker(coordinateArray, duration, {
                 autostart: true,
-                icon: driverIco
-               
+                icon: driverIco  
             }); 
             this._marker.on('end', () => {    
                 if (this.called != true)
                     map.removeLayer(this._marker)
-                document.dispatchEvent(new CustomEvent('driverarrived', {name: this.name}));     
+                document.dispatchEvent(new CustomEvent('driverarrived', {detail: {name: this.name}}));     
             });
             if (this.name == "" && this.service == ""){
                 this.name = names[Math.floor(Math.random() * names.length)]
@@ -81,11 +80,6 @@ const driver = {
     drive: function(origin, destination, duration=10000) {
         this._route(origin, destination)
         this._simulate(duration)
-    }
+    },
 }
-
-document.addEventListener('drivercalled', (e) => {
-    console.log(e.detail.driver)
-
-});
 
