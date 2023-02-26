@@ -1,7 +1,7 @@
 //jquery-click-scroll
 //by syamsul'isul' Arifin
 
-var sectionArray = [1, 2, 3, 4, 5, 6];
+var sectionArray = [1, 2, 3, 4,];
 
 const ModalWindow = {
     init() {
@@ -36,7 +36,7 @@ const ModalWindow = {
     openModal(modalOptions = {}) {
         modalOptions = Object.assign({
             title: 'Have You Registered to Vote?',
-            content: "Registering to vote is a vital step in ensuring that your voice is heard and that you have a say in the decisions that impact your community, state, and country. By registering to vote, you gain the ability to elect officials who share your values and will work towards creating the kind of future you want to see. It's important to remember that voting is not only a right, but also a responsibility that we have as citizens. Every vote counts, and by registering to vote, you are making a meaningful contribution to the democratic process. So if you haven't already done so, I encourage you to register to vote and make your voice heard."
+            content: "Registering to vote is a vital step in ensuring that your voice is heard and that you have a say in the decisions that impact your community, state, and country. By registering to vote, you gain the ability to elect officials who share your values and will work towards creating the kind of future you want to see. It's important to remember that voting is not only a right, but also a responsibility that we have as citizens. Every vote counts, and by registering to vote, you are making a meaningful contribution to the democratic process. So if you haven't already done so, we encourage you to register to vote and make your voice heard."
         }, modalOptions);
 
         const modalTemplate = this.getHtmlTemplate(modalOptions);
