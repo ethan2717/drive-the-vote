@@ -40,6 +40,7 @@
 * [About the Project](#about-the-project)
 * [Getting Started](#getting-started)
 * [Contributing](#contributing)
+* [Photos](#photos)
 * [License](#license)
 
 
@@ -101,6 +102,13 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## Contributing
+
+![alt text](https://github.com/msaini26/election-turnout-civic-tech/blob/main/resources/static/images/repo/bu.png)
+
+![alt text](https://github.com/msaini26/election-turnout-civic-tech/blob/main/resources/static/images/repo/room.jpg)
+
+![alt text](https://github.com/msaini26/election-turnout-civic-tech/blob/main/resources/static/images/repo/group.jpg)
 
 <!-- LICENSE -->
 ## License
