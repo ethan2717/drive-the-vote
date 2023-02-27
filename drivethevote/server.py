@@ -11,7 +11,7 @@ app = Sanic("DriveTheVote")
 @app.post("/email")
 async def on_email(request):
     msg = MIMEMultipart()
-    msg["From"] = "drivethevote2023@gmail.com"
+    msg["From"] = "drivethevotehackathon@gmail.com"
     msg["To"] = request.args.get("email")
     msg["Subject"] = "Thanks for registering!"
     msg.attach(
@@ -25,9 +25,9 @@ async def on_email(request):
         smtp.ehlo()
         smtp.starttls()
         smtp.ehlo()
-        smtp.login("drivethevote2023@gmail.com", "qymhrmycyjavjngr")
+        smtp.login("drivethevotehackathon@gmail.com", "duegmyyebisacvay")
         smtp.sendmail(
-            "drivethevote2023@gmail.com",
+            "drivethevotehackathon@gmail.com",
             request.args.get("email-address"),
             msg.as_string(),
         )
@@ -36,7 +36,7 @@ async def on_email(request):
 
 @app.post("/chat")
 async def on_chat(request):
-    openai.api_key = request.args.get("key")
+    openai.api_key = "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"
     completion = openai.Completion.create(
         engine="text-davinci-003", prompt=request.args.get("input"), max_tokens=1000
     )

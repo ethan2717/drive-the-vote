@@ -6,7 +6,7 @@ function email(){
 }
 
 function chat() {
-    fetch("/chat?input=" + document.getElementById("chat").value + "&key=" + document.getElementById("key").value,
+    fetch("/chat?input=" + document.getElementById("chat").value,
     {
         method: "POST",
     }).then((response) => response.text())

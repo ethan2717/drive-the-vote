@@ -171,7 +171,7 @@
 				}
 			}, this);
 			L.DomEvent.addListener(row, 'click', function(e) {
-				//this._map.panTo(coordinate);
+				this._map.panTo(coordinate);
 				L.DomEvent.stopPropagation(e);
 			}, this);
 		},
