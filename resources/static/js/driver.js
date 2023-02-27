@@ -28,14 +28,15 @@ const driver = {
         this._control.hide();
     },
 
-    _simulate : function (duration){
+    _simulate : function (path=false, duration){
         let simulatePromise = new Promise((resolve, reject) => {
             this._control.on('routeselected', (e) => {     
                 let route = e.route;
                 let polylineCoords = route.coordinates;
                 let polyline = L.polyline(polylineCoords)
                 resolve(polyline);
-                map.removeControl(this._control)
+                if (!path)
+                    map.removeControl(this._control)
             });
         });
         simulatePromise.then((polyline) => {
@@ -54,8 +55,9 @@ const driver = {
                 autoCenter: false
             }); 
             this._marker.on('end', () => {    
-                if (this.called != true)
-                    map.removeLayer(this._marker)
+                map.removeLayer(this._marker)
+                if (path)
+                    map.removeControl(this._control)
                 document.dispatchEvent(new CustomEvent('driverarrived', {detail: {name: this.name}}));     
             });
             //Localize
@@ -76,9 +78,9 @@ const driver = {
         });
     },
 
-    drive: function(origin, destination, duration=10000) {
+    drive: function(origin, destination, path=false, duration=15000) {
         this._route(origin, destination)
-        this._simulate(duration)
+        this._simulate(path, duration)
     },
 }
 
