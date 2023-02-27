@@ -39,15 +39,12 @@ fetch('/lib/geojson/Polling_Locations.geojson')
      }
 });
 
-/*
-//Approxiate current location.
 map.locate({maxZoom: 16});
 
 map.on('locationfound', (e) => {
     currentLocation = L.marker(e.latlng).addTo(map);
     currentLocation.bindPopup("You are approximately here!").openPopup();
 });
-*/
 
 currentLocation = L.marker([42.35003187356235, -71.10328374633661]).addTo(map);
 currentLocation.bindPopup("You are approximately here!").openPopup();
