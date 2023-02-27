@@ -41,8 +41,7 @@ fetch('/geojson/Polling_Locations.geojson')
 currentLocation = L.marker([42.35003187356235, -71.10328374633661], {
     draggable:'true'
 }).addTo(map);
-currentLocation.bindPopup("You are here! P.S: I am draggable.");
-
+currentLocation.bindPopup("You are here! (I am draggable)");
 
 //Generates nearby drivers who are available to volunteer.
 function locateDrivers(){
