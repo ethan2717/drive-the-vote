@@ -25,11 +25,11 @@ const driver = {
     },
 
     _simulate: function(path = false, duration) {
-        let simulatePromise = new Promise((resolve, reject) => {
+        var simulatePromise = new Promise((resolve, reject) => {
             this._control.on('routeselected', (e) => {
-                let route = e.route;
-                let polylineCoords = route.coordinates;
-                let polyline = L.polyline(polylineCoords)
+                var route = e.route;
+                var polylineCoords = route.coordinates;
+                var polyline = L.polyline(polylineCoords)
                 resolve(polyline);
                 if (!path)
                     map.removeControl(this._control)
