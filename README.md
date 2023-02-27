@@ -46,7 +46,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![alt text](https://github.com/msaini26/election-turnout-civic-tech/blob/main/resources/static/images/vote.PNG)
+![alt text](https://github.com/msaini26/election-turnout-civic-tech/blob/main/resources/static/images/repo/vote.PNG)
 
 ### Introduction
 Low voter turnout has been a persistent issue in American politics. In recent years, many potential voters have been unable to cast their ballots due to a lack of convenient transportation to polling places. This problem is particularly acute for low-income Americans, those in rural or suburban areas, the elderly, disabled, and members of marginalized communities who face systemic barriers to political participation. To address this issue, a team of civic tech enthusiasts created Drive the Vote, a web service that connects voters who need a ride to a polling place with nearby volunteer drivers, free of charge.
