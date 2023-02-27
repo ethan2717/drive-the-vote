@@ -7,6 +7,9 @@ const driver = {
     _origin: null,
     _control: null,
     _marker: null,
+    onArrival : function () {
+        console.warn("onArrival() not implemented.");
+    },
 
     _route: function(origin, destination) {
         if (this._origin != null && this._origin.lat == origin.lat && this._origin.lng == origin.lng != null)
@@ -54,11 +57,7 @@ const driver = {
                 map.removeLayer(this._marker)
                 if (path)
                     map.removeControl(this._control)
-                document.dispatchEvent(new CustomEvent('driverarrived', {
-                    detail: {
-                        name: this.name
-                    }
-                }));
+                this.onArrival();
             });
             this._marker.bindPopup(`
             Rideshare Service: ` + services[Math.floor(Math.random() * services.length)] + ` <br>

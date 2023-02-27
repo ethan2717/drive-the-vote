@@ -75,11 +75,9 @@ function requestDriver(){
     var origin_lat = ballot.getLatLng().lat + (Math.random() - 0.5) / 150;
     var origin_lng = ballot.getLatLng().lng + (Math.random() - 0.5) / 150;
     volunteerDriver.drive(L.latLng(origin_lat, origin_lng), L.latLng(currentLocation.getLatLng().lat, currentLocation.getLatLng().lng), true);
-    document.addEventListener('driverarrived', (e) => {
-        if (e.detail.name == volunteerDriver.name) {
-            volunteerDriver.drive(L.latLng(currentLocation.getLatLng().lat, currentLocation.getLatLng().lng), L.latLng(ballot.getLatLng().lat, ballot.getLatLng().lng), true);
-        }
-    });
+    volunteerDriver.onArrival = function() {
+        volunteerDriver.drive(L.latLng(currentLocation.getLatLng().lat, currentLocation.getLatLng().lng), L.latLng(ballot.getLatLng().lat, ballot.getLatLng().lng), true);
+    }
 }
 
 
