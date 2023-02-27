@@ -1,3 +1,7 @@
+
+//driver.js handles the mapping, movement and identity of an individual driver. 
+
+
 var names = ['Sophia', 'Ethan', 'Ava', 'Jackson', 'Olivia', 'Aiden', 'Emma', 'Lucas', 'Mia', 'Liam'];
 var services = ["Uber", "Lyft", "Taxi", "Volunteer"]
 var cars = ['SUV', 'Sedan', 'Coupe', 'Hatchback', 'Convertible', 'Pickup Truck', 'Sports Car', 'Minivan', 'Station Wagon', 'Electric Car'];
@@ -8,7 +12,7 @@ const driver = {
     _control: null,
     _marker: null,
     onArrival : function () {
-        console.warn("onArrival() not implemented.");
+        console.warn("onArrival() not implemented for driver.");
     },
 
     _route: function(origin, destination) {
