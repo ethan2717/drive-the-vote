@@ -11,6 +11,7 @@ app = Sanic("DriveTheVote")
 
 @app.post("/email")
 async def on_email(request):
+    # Sends email via smtp to recently registered volunteer.
     msg = MIMEMultipart()
     msg["From"] = "drivethevote2023@gmail.com"
     msg["To"] = request.args.get("email")
@@ -37,9 +38,9 @@ async def on_email(request):
 
 @app.post("/chat")
 async def on_chat(request):
+    # GPT for website support bot.
     try:
-        # Requires configuration, either hardcode API key or store/retrieve via env variable.
-        openai.api_key = None
+        openai.api_key = None  # Requires configuration, either hardcode API key or store/retrieve via env variable.
         completion = openai.Completion.create(
             engine="text-davinci-003", prompt=request.args.get("input"), max_tokens=1000
         )
