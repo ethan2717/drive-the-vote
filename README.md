@@ -51,7 +51,7 @@
 
 ### Civic Tech Hackathon
 
-The Civic Tech Hackathon is an opportunity for students to solve problems regarding government, education, and policy. Our goal is to draw attention to public interest technology in a creative and enjoyable way with the aim of promoting positive, adequate change and encouraging public good in the digital age. The Hackathon begins on February 25th at 9 A.M and will host students overnight. There will be prizes and events during the day as well! The location is 640 Commonwealth Ave Boston, MA at the Boston University Center for Computing & Data Sciences. 
+The Civic Tech Hackathon is an opportunity for students to solve problems regarding government, education, and policy. Our goal is to draw attention to public interest technology in a creative and enjoyable way with the aim of promoting positive, adequate change and encouraging public good in the digital age. The Hackathon begins on February 25th at 9 A.M and will host students overnight. The location is 640 Commonwealth Ave Boston, MA at the Boston University Center for Computing & Data Sciences. 
 
 Public Interest Technology (PIT) is a field of technology which prioritizes and incorporates public interest to benefit the public good by considering values that hold us together in society. Public interest places an emphasis on the well being of the society as a whole rather than just an individual or a marginalized group. Furthermore, it is a study of how technology influences societal experiences and aims to create harmony in government and society. 
 
