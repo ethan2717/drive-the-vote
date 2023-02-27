@@ -12,7 +12,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 
-fetch('/lib/geojson/Polling_Locations.geojson')
+fetch('/geojson/Polling_Locations.geojson')
 .then((response) => response.json())
 .then((json) => {
     var ballotIco = L.icon({
@@ -39,15 +39,18 @@ fetch('/lib/geojson/Polling_Locations.geojson')
      }
 });
 
+//Approximate current location.
 map.locate({maxZoom: 16});
-
 map.on('locationfound', (e) => {
     currentLocation = L.marker(e.latlng).addTo(map);
     currentLocation.bindPopup("You are approximately here!").openPopup();
 });
 
+/*
+//Hackathon location.
 currentLocation = L.marker([42.35003187356235, -71.10328374633661]).addTo(map);
 currentLocation.bindPopup("You are approximately here!").openPopup();
+*/
 
 function locateDrivers(){
     var currentCenter = map.getCenter();
