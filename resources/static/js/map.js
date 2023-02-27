@@ -65,7 +65,8 @@ function locateDrivers(){
 //Generates a nearby driver that will drive to your current location, then to a selected ballot.
 function requestDriver(){
     if (ballot == null) {
-        alert("No ballot selected!")
+        alert("No ballot selected!");
+        return;
     }
     var volunteerDriver = {...driver}
     var origin_lat = currentLocation.getLatLng().lat + (Math.random() - 0.5) / 50;
