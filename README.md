@@ -49,6 +49,16 @@
 
 ![alt text](https://github.com/msaini26/election-turnout-civic-tech/blob/main/resources/static/images/repo/vote.PNG)
 
+### Civic Tech Hackathon
+
+The Civic Tech Hackathon is an opportunity for students to solve problems regarding government, education, and policy. Our goal is to draw attention to public interest technology in a creative and enjoyable way with the aim of promoting positive, adequate change and encouraging public good in the digital age. The Hackathon begins on February 25th at 9 A.M and will host students overnight. There will be prizes and events during the day as well! The location is 640 Commonwealth Ave Boston, MA at the Boston University Center for Computing & Data Sciences. 
+
+Public Interest Technology (PIT) is a field of technology which prioritizes and incorporates public interest to benefit the public good by considering values that hold us together in society. Public interest places an emphasis on the well being of the society as a whole rather than just an individual or a marginalized group. Furthermore, it is a study of how technology influences societal experiences and aims to create harmony in government and society. 
+
+The hackathon concluded on Febuary 26 at 10 AM.
+
+https://techfc.org/
+
 ### Introduction
 Low voter turnout has been a persistent issue in American politics. In recent years, many potential voters have been unable to cast their ballots due to a lack of convenient transportation to polling places. This problem is particularly acute for low-income Americans, those in rural or suburban areas, the elderly, disabled, and members of marginalized communities who face systemic barriers to political participation. To address this issue, a team of civic tech enthusiasts created Drive the Vote, a web based ride sharing service that connects voters who need a ride to a polling place with nearby volunteer drivers, free of charge.
 
