@@ -83,7 +83,11 @@ Drive the Vote is a powerful example of civic tech in action. By connecting vote
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+You can still demo the website and rideshare simulator without following the steps below 
+simply by opening index.html in the `resources/static` directory. However, functionality
+such as email and ChatGPT will not be functional.
+
+To utilise the backend API, follow these simple steps.
 
 ### Prerequisites
 
@@ -91,10 +95,6 @@ To get a local copy up and running follow these simple steps.
 ```sh
 https://github.com/msaini26/election-turnout-civic-tech
 ```
-
-You can still demo the website and rideshare simulator without following the steps below 
-simply by opening index.html in the `resources/static` directory. However, functionality
-such as email and ChatGPT will not be functional.
 
 #### For backend functionality:
 
