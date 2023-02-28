@@ -73,6 +73,7 @@ function requestDriver(){
     var origin_lng = currentLocation.getLatLng().lng + (Math.random() - 0.5) / 50;
     volunteerDriver.drive(L.latLng(origin_lat, origin_lng), L.latLng(currentLocation.getLatLng().lat, currentLocation.getLatLng().lng), true);
     volunteerDriver.onArrival = function() {
+        volunteerDriver.hasPassenger = true;
         volunteerDriver.drive(L.latLng(currentLocation.getLatLng().lat, currentLocation.getLatLng().lng), L.latLng(ballot.getLatLng().lat, ballot.getLatLng().lng), true);
     }
 }

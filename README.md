@@ -91,6 +91,13 @@ To get a local copy up and running follow these simple steps.
 ```sh
 https://github.com/msaini26/election-turnout-civic-tech
 ```
+
+You can still demo this project without following the steps below simply by opening 
+index.html in the `resources/static` directory. However, fuctionality
+such as email and ChatGPT will not be functional.
+
+#### For backend functionality:
+
 * Install Python
 
 https://www.python.org/
@@ -99,6 +106,12 @@ https://www.python.org/
 
 ```sh
 pip install -r requirements.txt
+```
+
+* Start `sever.py`
+
+```sh
+python drivethevote/server.py
 ```
 
 ## Photos

@@ -10,6 +10,7 @@ const driver = {
     _origin: null,
     _control: null,
     _marker: null,
+    hasPassenger: false,
     onArrival : function () {console.warn("Driver has arrived, however onArrival() is not implemented.")},
 
     /**
@@ -78,12 +79,14 @@ const driver = {
             Name: ` + names[Math.floor(Math.random() * names.length)] + `<br>
             Car: ` + cars[Math.floor(Math.random() * cars.length)] + `<br>
             License Plate: ` + licensePlates[Math.floor(Math.random() * licensePlates.length)] + `<br>
+            Has Passanger: ` + this.hasPassenger + `<br>
             `);
             this._marker.addTo(map);       
         });
     },
 
-    drive: function(origin, destination, path = false, duration = 15000) {
+    drive: function(origin, destination, path = false, duration = 15000, hasPassenger=Math.random() > 0.5) {
+        this.hasPassenger = hasPassenger
         this._route(origin, destination)
         this._simulate(path, duration)
     },
