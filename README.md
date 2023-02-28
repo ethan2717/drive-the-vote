@@ -92,8 +92,8 @@ To get a local copy up and running follow these simple steps.
 https://github.com/msaini26/election-turnout-civic-tech
 ```
 
-You can still demo this project without following the steps below simply by opening 
-index.html in the `resources/static` directory. However, fuctionality
+You can still demo the website and rideshare simulator without following the steps below 
+simply by opening index.html in the `resources/static` directory. However, functionality
 such as email and ChatGPT will not be functional.
 
 #### For backend functionality:
