@@ -71,9 +71,8 @@ function requestDriver(){
     var volunteerDriver = {...driver}
     var origin_lat = currentLocation.getLatLng().lat + (Math.random() - 0.5) / 50;
     var origin_lng = currentLocation.getLatLng().lng + (Math.random() - 0.5) / 50;
-    volunteerDriver.drive(L.latLng(origin_lat, origin_lng), L.latLng(currentLocation.getLatLng().lat, currentLocation.getLatLng().lng), true);
+    volunteerDriver.drive(L.latLng(origin_lat, origin_lng), L.latLng(currentLocation.getLatLng().lat, currentLocation.getLatLng().lng), true, false);
     volunteerDriver.onArrival = function() {
-        volunteerDriver.hasPassenger = true;
-        volunteerDriver.drive(L.latLng(currentLocation.getLatLng().lat, currentLocation.getLatLng().lng), L.latLng(ballot.getLatLng().lat, ballot.getLatLng().lng), true);
+        volunteerDriver.drive(L.latLng(currentLocation.getLatLng().lat, currentLocation.getLatLng().lng), L.latLng(ballot.getLatLng().lat, ballot.getLatLng().lng), true, true);
     }
 }
