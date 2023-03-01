@@ -84,7 +84,7 @@ Drive the Vote is a powerful example of civic tech in action. By connecting vote
 ## Getting Started
 
 You can still demo the website and rideshare simulator without following the steps below 
-simply by opening index.html in the `resources/static` directory. However, functionality
+simply by opening `index.html` in the `resources/static` directory. However, functionality
 such as email and ChatGPT will not be available.
 
 To utilise the backend API, follow these simple steps.
