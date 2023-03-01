@@ -111,7 +111,7 @@ https://www.python.org/
 pip install -r requirements.txt
 ```
 
-* Start `sever.py`
+* Start `server.py`
 
 ```sh
 python drivethevote/server.py
