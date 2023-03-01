@@ -55,7 +55,7 @@ The Civic Tech Hackathon is an opportunity for students to solve problems regard
 
 Public Interest Technology (PIT) is a field of technology which prioritizes and incorporates public interest to benefit the public good by considering values that hold us together in society. Public interest places an emphasis on the well being of the society as a whole rather than just an individual or a marginalized group. Furthermore, it is a study of how technology influences societal experiences and aims to create harmony in government and society. 
 
-The hackathon concluded on Febuary 26 at 10 AM.
+The hackathon started on Febuary 25 at 9 AM and concluded on Febuary 26 at 10 AM 2023.
 
 https://techfc.org/
 
@@ -85,7 +85,7 @@ Drive the Vote is a powerful example of civic tech in action. By connecting vote
 
 You can still demo the website and rideshare simulator without following the steps below 
 simply by opening index.html in the `resources/static` directory. However, functionality
-such as email and ChatGPT will not be functional.
+such as email and ChatGPT will not be available.
 
 To utilise the backend API, follow these simple steps.
 
