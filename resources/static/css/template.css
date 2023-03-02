@@ -647,8 +647,8 @@ strong {
   background: var(--primary-color);
   border-radius: 100%;
   font-size: var(--h3-font-size);
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   line-height: 70px;
   text-align: center;
 }
