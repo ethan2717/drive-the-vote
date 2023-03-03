@@ -1874,3 +1874,18 @@ url("../fonts/bootstrap-icons.woff?8d200481aa7f02a2d63a331fc782cfaf") format("wo
 .bi-fuel-pump-diesel::before { content: "\f83c"; }
 .bi-fuel-pump-fill::before { content: "\f83d"; }
 .bi-fuel-pump::before { content: "\f83e"; }
+.submit-button{
+  margin-left: -0.9rem;
+  margin-top: 0.8rem;
+	background-color:#ffffff;
+	border-radius:2px;
+	border:1px solid #cecece;
+	display:inline-block;
+	cursor:pointer;
+	color:#303030;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+	font-size:16px;
+	padding:1rem 1rem;
+	text-decoration:none;
+
+}

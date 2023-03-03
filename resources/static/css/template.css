@@ -1110,6 +1110,21 @@ strong {
   .ticket-form {
     padding: 30px;
   }
+
+  #submit-button{
+    background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+	background-color:#ffffff;
+	border-radius:2px;
+	border:1px solid #c2c2c2;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Trebuchet MS;
+	font-size:15px;
+	padding:19px 18px;
+	text-decoration:none;
+
+  }
 }
 
 @media screen and (max-width: 767px) {

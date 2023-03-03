@@ -154,6 +154,55 @@
                       <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
                       <!-- bootstrap affix -->
                       <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+                      <div class="container page-container">
+                        <div class="col-md-10 col-lg-8 m-auto">
+                            &nbsp;
+                            &nbsp;
+                            <h6 class="title mb-4">SMS Notifications</h6>
+                            <p class="header-subtitle">Want to stay in the loop? Enter your phone number here to recieve text messages for driver pickups, clearance updates, and more!</p>
+                            <p class="mb-5"></p>
+                        </div> 
+                
+                    <!-- index js -->
+                    <script src="assets/js/index.js"></script>
+                        <form id="send-sms">
+                            <input type="text" id="phone_number" placeholder="Enter phone number" style="margin:left">
+                            <br> 
+                            <br> 
+                            <input class = "submit-button" type="submit" >
+                          </form>
+                          <script>
+                            var form = document.getElementById('send-sms');
+                            form.addEventListener('submit', function(event) {
+                              event.preventDefault();
+                                console.log('submitting')
+                              var to = document.getElementById('phone_number').value;
+                              console.log({to})
+                            //   var message = document.getElementById('message').value;
+                              var message = "Hi! Welcome to DriveTheVote's Message Subscriptions! We will be sending you updates on your application, as well as information about pickup and drop-off locations if you are approved! Text STOP to unsubscribe"
+                              
+                              var body = 'To=' + to + '&From=18884870108' + '&Body=' + encodeURIComponent(message)
+                              console.log({body})
+                              // Use the Twilio REST API to send the SMS message
+                              fetch('https://api.twilio.com/2010-04-01/Accounts/AC505469728a3776edaf584af8befb9d2b/Messages.json', {
+                                method: 'POST',
+                                headers: {
+                                  'Content-Type': 'application/x-www-form-urlencoded',
+                                //   'Content-Type': 'application/json',
+                                  "Authorization":`Basic ${btoa('AC505469728a3776edaf584af8befb9d2b:87594cf8b3052ff9b3336841d475debb')}`
+                                },
+                                body
+                              })
+                              .then(function(response) {
+                                return response.json();
+                              })
+                              .then(function(data) {
+                                console.log(data);
+                              });
+                            });
+                          </script>
+                        
+                
                     </div>
                   </div>
                   <div class="row">
