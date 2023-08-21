@@ -85,7 +85,7 @@ const driver = {
         });
     },
 
-    drive: function(origin, destination, path = false, hasPassenger=Math.random() > 0.5, duration = 25000) {
+    drive: function(origin, destination, path = false, hasPassenger=Math.random() > 0.5, duration = 20000) {
         this.hasPassenger = hasPassenger
         this._route(origin, destination)
         this._simulate(path, duration)
